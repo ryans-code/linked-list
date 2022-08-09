@@ -10,7 +10,7 @@ using namespace std;
 
 float randomNum()
 {
-    float randomNumber = (M_PI * 0.01) * rand() + 1;
+    float randomNumber = 1 + (M_PI) * (rand() % 1000);
     randomNumber = ceil(randomNumber * 100) / 100;
     return randomNumber;
 }
