@@ -11,7 +11,6 @@ private:
         Node *next;
     };
     Node *head;
-    Node *maximum();
 
 public:
     NumList();
