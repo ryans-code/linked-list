@@ -19,6 +19,13 @@ int main(int argc, char *argv[])
 {
     srand(time(NULL));        // randomize RNG seed
     int size = atoi(argv[1]); // store command line argument as variable
+    
+    if (size < 1)
+    {
+        cout << "Program should be run with command line argument, " << endl
+             << "try './a.out x' where x is an integer number greater than 0." << endl;
+        return -1;
+    }
 
     NumList list;
 
@@ -40,6 +47,7 @@ int main(int argc, char *argv[])
     cout << endl
          << "-----reversed list-----" << endl;
     list.displayList();
+    cout << endl;
 
     list.~NumList();
 
