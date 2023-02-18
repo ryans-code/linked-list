@@ -34,6 +34,13 @@ int main(int argc, char *argv[])
 {
     srand(time(NULL));        // randomize RNG seed
     int size = atoi(argv[1]); // store command line argument as variable
+    
+    if (size < 1)
+    {
+        cout << "Program should be run with command line argument, " << endl
+             << "try './a.out x' where x is an integer number greater than 0." << endl;
+        return -1;
+    }
 
     if (size < 1)
     {
@@ -168,8 +175,21 @@ int main(int argc, char *argv[])
     }
 
     cout << endl
+<<<<<<< HEAD
          << "gg" << endl
          << endl;
+=======
+         << "-----sorted list-----" << endl;
+    list.displayList();
+
+    list.reverseList();
+    cout << endl
+         << "-----reversed list-----" << endl;
+    list.displayList();
+    cout << endl;
+
+    list.~NumList();
+>>>>>>> ec548e09058e64f85c0136f67d5d8546d098904f
 
     return 0;
 }

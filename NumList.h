@@ -22,5 +22,9 @@ public:
     void deleteNode(float);
     void reverseList();
     void displayList();
+<<<<<<< HEAD
     bool contains(float);
 };
+=======
+};
+>>>>>>> ec548e09058e64f85c0136f67d5d8546d098904f
