@@ -174,22 +174,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    cout << endl
-<<<<<<< HEAD
-         << "gg" << endl
-         << endl;
-=======
-         << "-----sorted list-----" << endl;
-    list.displayList();
-
-    list.reverseList();
-    cout << endl
-         << "-----reversed list-----" << endl;
-    list.displayList();
-    cout << endl;
-
-    list.~NumList();
->>>>>>> ec548e09058e64f85c0136f67d5d8546d098904f
+    cout << endl << "gg" << endl << endl;
 
     return 0;
 }
