@@ -7,20 +7,20 @@ class NumList
 private:
     struct Node
     {
-        double data;
+        float data;
         Node *next;
     };
     Node *head;
-    Node *maximum();
 
 public:
     NumList();
     ~NumList();
 
-    void appendNode(double);
+    void appendNode(float);
     void sortList();
-    void insertNode(double);
-    void deleteNode(double);
+    void insertNode(float);
+    void deleteNode(float);
     void reverseList();
     void displayList();
+    bool contains(float);
 };

@@ -21,7 +21,7 @@ NumList::~NumList()
     }
 }
 
-void NumList::appendNode(double num)
+void NumList::appendNode(float num)
 {
     Node *newNode = new Node;
     newNode->data = num;
@@ -72,7 +72,7 @@ void NumList::sortList()
     }
 }
 
-void NumList::insertNode(double num)
+void NumList::insertNode(float num)
 {
     Node *newNode = new Node;
     newNode->data = num;
@@ -99,7 +99,7 @@ void NumList::insertNode(double num)
     }
 }
 
-void NumList::deleteNode(double num)
+void NumList::deleteNode(float num)
 {
     Node *p = head;
     Node *n;
@@ -110,7 +110,7 @@ void NumList::deleteNode(double num)
         p = p->next;
     }
 
-    if (p)
+    if (p->data == num)
     {
         if (p == head)
         {
@@ -156,4 +156,19 @@ void NumList::displayList()
         p = p->next;
     }
     cout << endl;
+}
+
+bool NumList::contains(float num)
+{
+    Node *p = head;
+
+    while (p)
+    {
+        if (p->data == num)
+        {
+            return true;
+        }
+        p = p->next;
+    }
+    return false;
 }
