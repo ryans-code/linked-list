@@ -43,7 +43,14 @@ int main(int argc, char *argv[])
     else
     {
         int size = atoi(argv[1]); // store command line argument as variable
-
+        if (size < 1)
+        {
+            cout << endl
+                 << "Invalid input size for list creation." << endl
+                 << endl;
+            return 0;
+        }
+        
         NumList list;
 
         for (int i = 0; i < size; i++)
